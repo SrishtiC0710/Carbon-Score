@@ -607,17 +607,42 @@ function trackTotal() {
     for (i = 0; i < elements.length; i++) {
       total += parseFloat(elements[i]);
     }
+  }
+  fetch("https://formspree.io/f/mayrqayk", {
+    method: "POST",
+    body: JSON.stringify({
+      total: total,
+      element: elements,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 
     for (i = 0; i < elements.length; i++) {
         var elementValue = parseFloat(elements[i]);
         console.log(`Value for element ${i}: ${elementValue}`);
 
-        if (!isNaN(elementValue)) {
-            total += elementValue;
-        } else {
-            console.error(`Invalid value for element ${i}: ${elements[i]}`);
-        }
+    if (!isNaN(elementValue)) {
+      total += elementValue;
+    } else {
+      console.error(`Invalid value for element ${i}: ${elements[i]}`);
     }
+  }
+  fetch("", {
+    method: "POST",
+    body: JSON.stringify({
+      total: total,
+      element: elements,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 
     console.log("Total:", total);
     return total;
