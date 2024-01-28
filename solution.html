@@ -1,0 +1,210 @@
+<html>
+    <head>
+        <title>Carbon Footprint Calculator</title>
+        <link rel="stylesheet" href="questionStyle.css">
+        <meta name="viewport" content="width =device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+        
+        <style>
+            *{
+             padding: 0;
+             margin: 0;
+             outline: none;
+             box-sizing: border-box;  
+            }
+            #banner{
+                width: 100%;
+                height: 120vh;
+                background-image: linear-gradient(rgba(0,0,0,0.5), #000000),url("images/sol.jpg");
+                background-size: cover;
+                background-position: center; 
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .container{
+                position:relative;
+                width: 600px;
+                padding: 40px;
+            }
+            .input-field{
+                position:relative;
+                height: 40px;
+                width: 100%;
+            }
+            .input-field input[type="text"]{
+                position: absolute;
+                background:transparent;
+                border: none;
+                box-shadow: none;
+                font-size: 16px;
+                color: #fff;
+                width: 100%;
+            }
+            .input-field label{
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: rgba(255, 255, 255, 0.575);
+                pointer-events: none;
+                display: block;
+                transition: 0.5s;
+            }
+            .input-field input[type="text"]:focus + label,
+            .input-field input[type="text"]:valid + label{
+                transform: translateY(-35px);
+                font-size: 14px;
+                color: white;
+                background: #049210;
+                padding: 2px 6px;
+            }
+            .input-field span{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: block;
+                background: #555;
+                width: 100%;
+                height: 2px;
+            }
+            .input-field span:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #00b0ff;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.5s ease-in-out;
+            }
+            .input-field input[type="text"]:focus ~ span:before,
+            .input-field input[type="text"]:valid ~ span:before{
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: transform 0.5s ease-in-out;
+            }
+            .btn{
+                margin-top: 20px;
+                border: none;
+                box-shadow: none;
+                padding: 10px 25px;
+                background: #333;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+            .btn:hover{
+               background: #0b9234
+            }
+            #tips {
+                padding: 20px;
+                color: white;
+                font-size: 18px; 
+                margin: -550px;
+                margin-left: 100px;
+            }
+
+            #tips ul {
+                list-style: none; 
+            }
+
+            #tips li {
+                margin-bottom: 10px; 
+            }
+
+        </style>
+    </head>
+    <body>
+       <section id = "banner">
+            <img src = "images/logo.png" class = "logo">
+            <div class="banner-text">
+                <h1>Tips to Lower your Personal Carbon Emissions </h1>
+                <div class="banner-btn" style="padding-top: 20%;">
+                    <a href="end.html"><span></span>Carbon Score</a>
+                    <a href = "index.html"><span></span>Back to Home</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id = "tip">
+            <div id = "tips">
+                <ul>
+                    <li>
+                        1. Switch to a reusable water bottle instead of plastic ones. It's not only cost-effective but also better for the environment.
+                    </li>
+                    <li>
+                        2. Try walking or cycling for short distances. It's a healthy addition to your routine, and a mile can be covered in under 20 minutes.
+                    </li>
+                    <li>
+                        3. Remember to turn off lights and unplug electronics when not in use. Small steps make a big difference.
+                    </li>
+                    <li>
+                        4. Maintain proper tire pressure and regular servicing for your car. It improves efficiency, reduces fuel consumption,<br>and lowers emissions.
+                    </li>
+                    <li>
+                        5. Opt for locally sourced foods and reduce red meat consumption. Enjoy the fresh taste, support local businesses, and feel healthier.
+                    </li>
+                    <li>
+                        6. Use the cold wash setting for laundry and always wash full loads. This saves water and energy, and consider air-drying<br>clothes for extra savings.
+                    </li>
+                    <li>
+                        7. Adjust your thermostat to 78°F in summer and 67°F in winter. Turn off heating and cooling when away to significantly cut<br> down on energy bills.
+                    </li>
+                    <li>
+                        8. Drive smarter. Gentle acceleration, coasting to stops, obeying speed limits, and avoiding idle time in drive-thrus can reduce<br>
+                           fuel use and emissions.
+                    </li>
+                    <li>
+                       9. Prevent waste by selling, donating, or recycling items you don't need. Aim to reuse or repurpose as much as possible.
+                    </li>
+                    <li>
+                       10. Choose public transportation, carpooling, or biking for commuting at least once a week. It's a stress-free way to travel<br> and good for the planet.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <div id="sideNav">
+            <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+            </ul>  
+            </nav>
+        </div>
+        <div id="menuBtn">
+            <img src="images/menu.png" id="menu">
+        </div>
+
+        <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
+
+        sideNav.style.right = "-250px";
+
+        menuBtn.onclick = function(){
+            if(sideNav.style.right == "-250px"){
+                sideNav.style.right = "0";
+                menu.src = "images/close.png";
+            }
+            else{
+                sideNav.style.right = "-250px";
+                menu.src = "images/menu.png";
+            }
+        }
+
+        
+        </script>
+
+        <script src="calc.js"></script>
+        <script>
+        
+        </script>
+    </body>
+</html>
