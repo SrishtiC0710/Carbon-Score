@@ -22,8 +22,6 @@ var work;
 var transport;
 var car;
 var elecCar;
-var checkCar = false;
-var checkDish = false;
 var bike;
 var bus;
 var walk;
