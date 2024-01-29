@@ -22,6 +22,8 @@ var work;
 var transport;
 var car;
 var elecCar;
+var checkCar = false;
+var checkDish = false;
 var bike;
 var bus;
 var walk;
@@ -68,10 +70,14 @@ function eggQ() {
     console.log(eggInt)
     sessionStorage.setItem("eggNum", eggInt);
   });
-  var eggInput = document.getElementById("eggques").value;
-  if (eggInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const eggInput = document.getElementById("eggques");
+  if (egg.trim() === "") {
+    alert("Please enter a response.");
+    eggInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("eggques", eggInput.value);
+  window.location.href = "beefq.html";
 }
 
 //beef
@@ -83,10 +89,14 @@ function beefQ() {
     var beefInt = (parseInt(beef) * 6.61)*52.143;
     sessionStorage.setItem("beefNum", beefInt);
   });
-  var beefInput = document.getElementById("beefques").value;
-  if (beefInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const beefInput = document.getElementById("beefques");
+  if (beef.trim() === "") {
+    alert("Please enter a response.");
+    beefInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("beefques", beefInput.value);
+  window.location.href = "poultry.html";
 }
 
 //poultry
@@ -98,10 +108,14 @@ function poultryQ() {
     var poultryInt = (parseInt(poultry) * 1.26)*52.143;
     sessionStorage.setItem("poultryNum", poultryInt);
   });
-  var poultryInput = document.getElementById("poultryques").value;
-  if (poultryInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const poultryInput = document.getElementById("poultryques");
+  if (poultry.trim() === "") {
+    alert("Please enter a response.");
+    poultryInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("poultryques", poultryInput.value);
+  window.location.href = "porkq.html";
 }
 
 //pork
@@ -113,10 +127,14 @@ function porkQ() {
     var porkInt = (parseInt(pork) * 1.72)*52.143;
     sessionStorage.setItem("porkNum", porkInt);
   });
-  var porkInput = document.getElementById("porkques").value;
-  if (porkInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const porkInput = document.getElementById("porkques");
+  if (pork.trim() === "") {
+    alert("Please enter a response.");
+    porkInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("porkques", porkInput.value);
+  window.location.href = "cheese.html";
 }
 
 //cheese
@@ -128,10 +146,14 @@ function cheeseQ() {
     var cheeseInt = (parseInt(cheese) * 2.45)*52.143;
     sessionStorage.setItem("cheeseNum", cheeseInt);
   });
-  var cheeseInput = document.getElementById("cheeseques").value;
-  if (cheeseInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const cheeseInput = document.getElementById("cheeseques");
+  if (cheese.trim() === "") {
+    alert("Please enter a response.");
+    cheeseInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("cheeseques", cheeseInput.value);
+  window.location.href = "milk.html";
 }
 
 //milk
@@ -143,10 +165,14 @@ function milkQ() {
     var milkInt = (parseInt(milk) * 0.72)*52.143;
     sessionStorage.setItem("milkNum", milkInt);
   });
-  var milkInput = document.getElementById("milkques").value;
-  if (milkInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const milkInput = document.getElementById("milkques");
+  if (milk.trim() === "") {
+    alert("Please enter a response.");
+    milkInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("milkques", milkInput.value);
+  window.location.href = "rice.html";
 }
 
 //Rice
@@ -158,10 +184,14 @@ function riceQ() {
     var riceInt = (parseInt(rice) * 0.16)*52.143;
     sessionStorage.setItem("riceNum", riceInt);
   });
-  var riceInput = document.getElementById("riceques").value;
-  if (riceInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const riceInput = document.getElementById("riceques");
+  if (rice.trim() === "") {
+    alert("Please enter a response.");
+    riceInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("riceques", riceInput.value);
+  window.location.href = "legume.html";
 }
 
 //Legume
@@ -173,10 +203,14 @@ function legumeQ() {
     var legumeInt = (parseInt(legume) * 0.11)*52.143;
     sessionStorage.setItem("legumeNum", legumeInt);
   });
-  var legumeInput = document.getElementById("legumeques").value;
-  if (legumeInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const legumeInput = document.getElementById("legumeques");
+  if (legume.trim() === "") {
+    alert("Please enter a response.");
+    legumeInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("legumeques", legumeInput.value);
+  window.location.href = "carrot.html";
 }
 
 //Carrot
@@ -188,10 +222,14 @@ function carrotQ() {
     var carrotInt = (parseInt(carrot) * 0.07)*52.143;
     sessionStorage.setItem("carrotNum", carrotInt);
   });
-  var carrotInput = document.getElementById("carrotques").value;
-  if (carrotInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const carrotInput = document.getElementById("carrotques");
+  if (carrot.trim() === "") {
+    alert("Please enter a response.");
+    carrotInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("carrotques", carrotInput.value);
+  window.location.href = "potato.html";
 }
 
 //Potato
@@ -203,10 +241,14 @@ function potatoQ() {
     var potatoInt = (parseInt(potato) * 0.03)*52.143;
     sessionStorage.setItem("potatoNum", potatoInt);
   });
-  var potatoInput = document.getElementById("potatoques").value;
-  if (potatoInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const potatoInput = document.getElementById("potatoques");
+  if (potato.trim() === "") {
+    alert("Please enter a response.");
+    potatoInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("potatoques", potatoInput.value);
+  window.location.href = "handq.html";
 }
 
 //question4
@@ -242,10 +284,14 @@ function handQ() {
     console.log(handInt);
     sessionStorage.setItem("handNum", handInt);
   });
-  var handInput = document.getElementById("handques").value;
-  if (handInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const handInput = document.getElementById("handques");
+  if (hand.trim() === "") {
+    alert("Please enter a response.");
+    handInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("handques", handInput.value);
+  window.location.href = "washerq.html";
 }
 
 // dishwasher
@@ -257,10 +303,14 @@ function washerQ() {
     var washerInt = (parseInt(washer) * 1.34)*365;
     sessionStorage.setItem("washerNum", washerInt);
   });
-  var washerInput = document.getElementById("washerques").value;
-  if (washerInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const washerInput = document.getElementById("washerques");
+  if (washer.trim() === "") {
+    alert("Please enter a response.");
+    washerInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("washerques", washerInput.value);
+  window.location.href = "electricity.html";
 }
 
 
@@ -273,10 +323,14 @@ function electricityQ() {
     var electricityInt = (parseInt(electricity) * 0.86)*12;
     sessionStorage.setItem("electricityNum", electricityInt);
   });
-  var electricityInput = document.getElementById("electricityques").value;
-  if (electricityInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const electricityInput = document.getElementById("electricityques");
+  if (electricity.trim() === "") {
+    alert("Please enter a response.");
+    electricityInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("electricityques", electricityInput.value);
+  window.location.href = "water.html";
 }
 
 //water
@@ -288,10 +342,14 @@ function waterQ() {
     var waterInt = (parseInt(water) * 0.18)*12;
     sessionStorage.setItem("waterNum", waterInt);
   });
-  var waterInput = document.getElementById("waterques").value;
-  if (waterInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const waterInput = document.getElementById("waterques");
+  if (water.trim() === "") {
+    alert("Please enter a response.");
+    waterInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("waterques", waterInput.value);
+  window.location.href = "insta.html";
 }
 
 // //Hair question
@@ -323,10 +381,14 @@ function instaQ() {
     var instaInt = (parseInt(insta) * 0.00683)*365;
     sessionStorage.setItem("instaNum", instaInt);
   });
-  var instaInput = document.getElementById("instaques").value;
-  if (instaInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const instaInput = document.getElementById("instaques");
+  if (insta.trim() === "") {
+    alert("Please enter a response.");
+    instaInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("instaques", instaInput.value);
+  window.location.href = "tiktok.html";
 }
 
 //tiktok
@@ -338,10 +400,14 @@ function tiktokQ() {
     var tiktokInt = (parseInt(tiktok) * 0.002833)*365;
     sessionStorage.setItem("tiktokNum", tiktokInt);
   });
-  var tiktokInput = document.getElementById("tiktokques").value;
-  if (tiktokInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const tiktokInput = document.getElementById("tiktokques");
+  if (tiktok.trim() === "") {
+    alert("Please enter a response.");
+    tiktokInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("tiktokques", tiktokInput.value);
+  window.location.href = "netflix.html";
 }
 
 //netflix
@@ -353,10 +419,14 @@ function netflixQ() {
     var netflixInt = (parseInt(netflix) * 0.002)*365;
     sessionStorage.setItem("netflixNum", netflixInt);
   });
-  var netflixInput = document.getElementById("netflixques").value;
-  if (netflixInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const netflixInput = document.getElementById("netflixques");
+  if (netflix.trim() === "") {
+    alert("Please enter a response.");
+    netflixInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("netflixques", netflixInput.value);
+  window.location.href = "computer.html";
 }
 
 //computer
@@ -368,10 +438,14 @@ function computerQ() {
     var computerInt = (parseInt(computer) * 0.1934)*365;
     sessionStorage.setItem("computerNum", computerInt);
   });
-  var computerInput = document.getElementById("computerques").value;
-  if (computerInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const computerInput = document.getElementById("computerques");
+  if (computer.trim() === "") {
+    alert("Please enter a response.");
+    computerInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("computerques", computerInput.value);
+  window.location.href = "car.html";
 }
 
 //work
@@ -430,10 +504,14 @@ function carQ() {
     var carInt = (parseInt(car) * 0.77)*365;
     sessionStorage.setItem("carNum", carInt);
   });
-  var carInput = document.getElementById("carques").value;
-  if (carInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const carInput = document.getElementById("carques");
+  if (car.trim() === "") {
+    alert("Please enter a response.");
+    carInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("carques", carInput.value);
+  window.location.href = "elecCar.html";
 }
 
 //elecCar
@@ -446,10 +524,14 @@ function elecCarQ() {
     console.log(elecCarInt);
     sessionStorage.setItem("elecCarNum", elecCarInt);
   });
-  var elecCarInput = document.getElementById("elecCarques").value;
-  if (elecCarInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const elecCarInput = document.getElementById("elecCarques");
+  if (elecCar.trim() === "") {
+    alert("Please enter a response.");
+    elecCarInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("elecCarques", elecCarInput.value);
+  window.location.href = "bike.html";
 }
 
 
@@ -463,10 +545,14 @@ function bikeQ() {
     var bikeInt = (parseInt(bike) * 0.0727525)*365;
     sessionStorage.setItem("bikeNum", bikeInt);
   });
-  var bikeInput = document.getElementById("bikeques").value;
-  if (bikeInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const bikeInput = document.getElementById("bikeques");
+  if (bike.trim() === "") {
+    alert("Please enter a response.");
+    bikeInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("bikeques", bikeInput.value);
+  window.location.href = "walk.html";
 }
 
 //walk
@@ -478,10 +564,14 @@ function walkQ() {
     var walkInt = (parseInt(walk) * 0.13)*365;
     sessionStorage.setItem("walkNum", walkInt);
   });
-  var walkInput = document.getElementById("walkques").value;
-  if (walkInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const walkInput = document.getElementById("walkques");
+  if (walk.trim() === "") {
+    alert("Please enter a response.");
+    walkInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("walkques", walkInput.value);
+  window.location.href = "bus.html";
 }
 
 //bus
@@ -493,10 +583,14 @@ function busQ() {
     var busInt = (parseInt(bus) * 0.18)*365;
     sessionStorage.setItem("busNum", busInt);
   });
-  var busInput = document.getElementById("busques").value;
-  if (busInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const busInput = document.getElementById("busques");
+  if (bus.trim() === "") {
+    alert("Please enter a response.");
+    busInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("busques", busInput.value);
+  window.location.href = "planeq.html";
 }
 
 //plane
@@ -508,10 +602,14 @@ function planeQ() {
     var planeInt = parseInt(plane) * 198.416;
     sessionStorage.setItem("planeNum", planeInt);
   });
-  var planeInput = document.getElementById("planeques").value;
-  if (planeInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const planeInput = document.getElementById("planeques");
+  if (plane.trim() === "") {
+    alert("Please enter a response.");
+    planeInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("planeques", planeInput.value);
+  window.location.href = "gym.html";
 }
 
 //gym
@@ -523,10 +621,14 @@ function gymQ() {
     var gymInt = (parseInt(gym) * 0.99)*365;
     sessionStorage.setItem("gymNum", gymInt);
   });
-  var gymInput = document.getElementById("gymques").value;
-  if (gymInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const gymInput = document.getElementById("gymques");
+  if (gym.trim() === "") {
+    alert("Please enter a response.");
+    gymInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("gymques", gymInput.value);
+  window.location.href = "trash.html";
 }
 
 //trash
@@ -538,10 +640,14 @@ function trashQ() {
     var trashInt = (parseInt(trash) * 0.8)*365;
     sessionStorage.setItem("trashNum", trashInt);
   });
-  var trashInput = document.getElementById("trashques").value;
-  if (trashInput.trim() == "") {
-    alert("Please enter a response before submitting.");
+  const trashInput = document.getElementById("trashques");
+  if (trash.trim() === "") {
+    alert("Please enter a response.");
+    trashInput.value = "0"; // Reset the input field
+    return; // Stop the function here
   }
+  sessionStorage.setItem("trashques", trashInput.value);
+  window.location.href = "end.html";
 }
 
 function trackTotal() {
