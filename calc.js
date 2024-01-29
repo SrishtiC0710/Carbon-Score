@@ -72,7 +72,7 @@ function eggQ() {
   });
   const eggInput = document.getElementById("eggques");
   if (egg.trim() === "") {
-    confirm("Please enter a response.");
+    window.alert("Please enter a response.");
     // eggInput.value = "0"; // Reset the input field
     // return; // Stop the function here
   }
