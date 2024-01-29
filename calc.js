@@ -73,10 +73,10 @@ function eggQ() {
   const eggInput = document.getElementById("eggques");
   if (egg.trim() === "") {
     alert("Please enter a response.");
-    eggInput.value = "0"; // Reset the input field
-    return; // Stop the function here
+    // eggInput.value = "0"; // Reset the input field
+    // return; // Stop the function here
   }
-  sessionStorage.setItem("eggques", eggInput.value);
+  // sessionStorage.setItem("eggques", eggInput.value);
   window.location.href = "beefq.html";
 }
 
