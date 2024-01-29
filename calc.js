@@ -72,7 +72,8 @@ function eggQ() {
   });
   const eggInput = document.getElementById("eggques");
   if (egg.trim() === "") {
-    window.alert("Please enter a response.");
+    alert("Please enter a response.");
+    document.getElementById("eggInput").focus();
     // eggInput.value = "0"; // Reset the input field
     // return; // Stop the function here
   }
