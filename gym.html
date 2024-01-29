@@ -5,8 +5,8 @@
         <meta name="viewport" content="width =device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+        
         <style>
             *{
              padding: 0;
@@ -111,8 +111,7 @@
             <div class="banner-text">
                 <h1>How many hours are you in a gym in a day?</h1>
                 <div class="banner-btn">
-                    <a href="planeq.html"><span></span><</a>
-                    <a href="trash.html"><span></span>></a>
+                    <a href="planeq.html"><span></span>Back</a>
                 </div>
             </div>
         </section>
@@ -125,7 +124,7 @@
                     <label for = "gymques">Please enter your response in hours</label>
                     <span></span>
                 </div>
-                <button type="submit" class="btn" onclick="gymQ()">Enter</button>
+                <button type="submit" class="btn" onclick="gymQ(); hideInput();">Enter</button>
             </form>
         </div>
         </section>
@@ -134,8 +133,7 @@
         <div id="sideNav">
             <nav>
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="index.html">HOME</a></li>                
             </ul>  
             </nav>
         </div>
@@ -166,7 +164,9 @@
 
         <script src="calc.js"></script>
         <script>
-        
+            function hideInput() {
+                document.getElementById('gymques').style.display = 'none';
+            }
         </script>
     </body>
 </html>

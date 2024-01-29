@@ -5,8 +5,8 @@
         <meta name="viewport" content="width =device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+        
         <style>
             *{
              padding: 0;
@@ -118,10 +118,9 @@
        <section id = "banner">
             <img src = "images/logo.png" class = "logo">
             <div class="banner-text">
-                <h1>How many gallons of trash do you produce?</h1>
+                <h1>How many gallons of trash do you produce in a day?</h1>
                 <div class="banner-btn">
-                    <a href="gym.html"><span></span><</a>
-                    <a href="end.html"><span></span>></a>
+                    <a href="gym.html"><span></span>Back</a>
                 </div>
             </div>
         </section>
@@ -134,7 +133,7 @@
                     <label for = "trashques">Please enter your response in gallons</label>
                     <span></span>
                 </div>
-                <button type="submit" class="btn" onclick="trashQ()">Enter</button>
+                <button type="submit" class="btn" onclick="trashQ(); hideInput();">Enter</button>
             </form>
         </div>
         </section>
@@ -150,7 +149,6 @@
             <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
             </ul>  
             </nav>
         </div>
@@ -181,7 +179,9 @@
 
         <script src="calc.js"></script>
         <script>
-        
+            function hideInput() {
+                document.getElementById('trashques').style.display = 'none';
+            }
         </script>
     </body>
 </html>

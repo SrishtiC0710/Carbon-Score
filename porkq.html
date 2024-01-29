@@ -5,8 +5,8 @@
         <meta name="viewport" content="width =device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+        
         <style>
             *{
              padding: 0;
@@ -111,8 +111,7 @@
             <div class="banner-text">
                 <h1>How many servings of pork do you eat per week?</h1>
                 <div class="banner-btn">
-                    <a href="poultry.html"><span></span><</a>
-                    <a href="cheese.html"><span></span>></a>
+                    <a href="poultry.html"><span></span>Back</a>
                 </div>
             </div>
         </section>
@@ -125,7 +124,7 @@
                     <label for = "porkques">Please enter your weekly pork intake</label>
                     <span></span>
                 </div>
-                <button type="submit" class="btn" onclick="porkQ()">Enter</button>
+                <button type="submit" class="btn" onclick="porkQ(); hideInput()">Enter</button>
             </form>
         </div>
         </section>
@@ -135,7 +134,6 @@
             <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
             </ul>  
             </nav>
         </div>
@@ -166,7 +164,9 @@
 
         <script src="calc.js"></script>
         <script>
-        
+            function hideInput() {
+                document.getElementById('porkques').style.display = 'none';
+            }
         </script>
     </body>
 </html>

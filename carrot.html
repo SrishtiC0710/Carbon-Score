@@ -5,8 +5,7 @@
         <meta name="viewport" content="width =device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
         <style>
             *{
              padding: 0;
@@ -111,8 +110,7 @@
             <div class="banner-text">
                 <h1>How many servings of carrots do you eat per week?</h1>
                 <div class="banner-btn">
-                    <a href="legume.html"><span></span><</a>
-                    <a href="potato.html"><span></span>></a>
+                    <a href="legume.html"><span></span>Back</a>
                 </div>
             </div>
         </section>
@@ -125,7 +123,7 @@
                     <label for = "carrotques">Please enter your weekly carrot intake</label>
                     <span></span>
                 </div>
-                <button type="submit" class="btn" onclick="carrotQ()">Enter</button>
+                <button type="submit" class="btn" onclick="carrotQ(); hideInput();">Enter</button>
             </form>
         </div>
         </section>
@@ -135,7 +133,7 @@
             <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
+                
             </ul>  
             </nav>
         </div>
@@ -166,7 +164,9 @@
 
         <script src="calc.js"></script>
         <script>
-        
+            function hideInput() {
+                document.getElementById('carrotques').style.display = 'none';
+            }
         </script>
     </body>
 </html>

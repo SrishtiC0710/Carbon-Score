@@ -5,8 +5,8 @@
         <meta name="viewport" content="width =device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+        
         <style>
             *{
              padding: 0;
@@ -16,18 +16,13 @@
             }
             #banner{
                 width: 100%;
-                height: 100vh;
-                background-image: linear-gradient(rgba(0,0,0,0.5), #000000),url("images/end_Envi.jpg");
+                height: 120vh;
+                background-image: linear-gradient(rgba(0,0,0,0.5), #000000),url("images/sol.jpg");
                 background-size: cover;
                 background-position: center; 
-            }
-            .banner-text p{
-            font-size: 30px;
-            font-family: 'Playfair Display', serif;
-            }
-            #end{
-                margin-top: -400px;
-                margin-left: 300px;
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
             }
             .container{
                 position:relative;
@@ -106,64 +101,73 @@
             .btn:hover{
                background: #0b9234
             }
-            #total-container {
-                text-align: center;
-                margin-top: 5px;
+            #tips {
+                padding: 20px;
+                color: white;
+                font-size: 18px; 
+                margin: -550px;
+                margin-left: 100px;
             }
 
-            #result {
-                font-size: 30px;
-                color: #dbe9dc; 
-                font-weight: bold;
-                margin: -15px;
-            }  
-            #tree-container{
-                text-align: center;
-                margin-top: 20px;
+            #tips ul {
+                list-style: none; 
             }
-            #treeR{
-                font-size: 60px;
-                color: white;
-                font-weight: bold;
-                font-family: 'Playfair Display', serif;
+
+            #tips li {
+                margin-bottom: 10px; 
             }
-            .txt p{
-                font-family: 'Playfair Display', serif;
-            }
+
         </style>
     </head>
-    <body onload="endPage()">
+    <body>
        <section id = "banner">
             <img src = "images/logo.png" class = "logo">
             <div class="banner-text">
-                <h1 style="font-size: 60px;">You emit approximately </h1>
-                <p><br><br>If everyone lived like you, we would need to plant</p>
-                <p><br><br>To absorb the amount of Carbon you emit in a year.</p>
-                <div class="banner-btn" style="margin: 50px;">
-                    <a href="index.html"><span></span>Back to Home</a>
-                    <a href = "solution.html"><span></span>Solutions</a>
+                <h1>Tips to Lower your Personal Carbon Emissions </h1>
+                <div class="banner-btn" style="padding-top: 20%;">
+                    <a href="end.html"><span></span>Carbon Score</a>
+                    <a href = "index.html"><span></span>Back to Home</a>
                 </div>
             </div>
         </section>
         
-
-        <section id="end">
-            <div class="container">
-                <div id="total-container">
-                    <div id="result"></div>
-                </div>
+        <section id = "tip">
+            <div id = "tips">
+                <ul>
+                    <li>
+                        1. Switch to a reusable water bottle instead of plastic ones. It's not only cost-effective but also better for the environment.
+                    </li>
+                    <li>
+                        2. Try walking or cycling for short distances. It's a healthy addition to your routine, and a mile can be covered in under 20 minutes.
+                    </li>
+                    <li>
+                        3. Remember to turn off lights and unplug electronics when not in use. Small steps make a big difference.
+                    </li>
+                    <li>
+                        4. Maintain proper tire pressure and regular servicing for your car. It improves efficiency, reduces fuel consumption,<br>and lowers emissions.
+                    </li>
+                    <li>
+                        5. Opt for locally sourced foods and reduce red meat consumption. Enjoy the fresh taste, support local businesses, and feel healthier.
+                    </li>
+                    <li>
+                        6. Use the cold wash setting for laundry and always wash full loads. This saves water and energy, and consider air-drying<br>clothes for extra savings.
+                    </li>
+                    <li>
+                        7. Adjust your thermostat to 78°F in summer and 67°F in winter. Turn off heating and cooling when away to significantly cut<br> down on energy bills.
+                    </li>
+                    <li>
+                        8. Drive smarter. Gentle acceleration, coasting to stops, obeying speed limits, and avoiding idle time in drive-thrus can reduce<br>
+                           fuel use and emissions.
+                    </li>
+                    <li>
+                       9. Prevent waste by selling, donating, or recycling items you don't need. Aim to reuse or repurpose as much as possible.
+                    </li>
+                    <li>
+                       10. Choose public transportation, carpooling, or biking for commuting at least once a week. It's a stress-free way to travel<br> and good for the planet.
+                    </li>
+                </ul>
             </div>
         </section>
-
-        <section id="tree">
-            <div class="t-container">
-                <div id="tree-container">
-                    <div id="treeR"></div>
-                </div>
-            </div>
-        </section>
-
-        
 
 
         <div id="sideNav">
